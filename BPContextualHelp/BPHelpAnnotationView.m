@@ -144,7 +144,7 @@ static const CGFloat BPFontSize = 12.0;
 		else
 		{
             contentSize = [self.annotation.text boundingRectWithSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX)
-                                                             options:0
+                                                             options:NSStringDrawingUsesLineFragmentOrigin
                                                           attributes:@{ NSFontAttributeName : [UIFont boldSystemFontOfSize:BPFontSize] }
                                                              context:nil].size;
 		}

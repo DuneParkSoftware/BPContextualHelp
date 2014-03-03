@@ -136,12 +136,11 @@ static const CGFloat BPFontSize = 12.0;
 		[invocation invoke];
 		[invocation getReturnValue:&boundingRect];
 		contentSize = boundingRect.size;
-		//contentSize = [self.annotation.text boundingRectWithSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:BPFontSize]} context:nil].size;
 	}
 	else
 	{
         contentSize = [self.annotation.text boundingRectWithSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX)
-                                                         options:0
+                                                         options:NSStringDrawingUsesLineFragmentOrigin
                                                       attributes:@{ NSFontAttributeName : [UIFont boldSystemFontOfSize:BPFontSize] }
                                                          context:nil].size;
 	}
