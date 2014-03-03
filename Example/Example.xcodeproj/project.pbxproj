@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71A67AAB18C43000000F41B7 /* BPHelpAnnotationThemeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A67AAA18C43000000F41B7 /* BPHelpAnnotationThemeColors.m */; };
 		9444286E18A1E0F80033E026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444286D18A1E0F80033E026 /* Foundation.framework */; };
 		9444287018A1E0F80033E026 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444286F18A1E0F80033E026 /* CoreGraphics.framework */; };
 		9444287218A1E0F80033E026 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444287118A1E0F80033E026 /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71A67AA918C43000000F41B7 /* BPHelpAnnotationThemeColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPHelpAnnotationThemeColors.h; sourceTree = "<group>"; };
+		71A67AAA18C43000000F41B7 /* BPHelpAnnotationThemeColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPHelpAnnotationThemeColors.m; sourceTree = "<group>"; };
 		9444286A18A1E0F80033E026 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9444286D18A1E0F80033E026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9444286F18A1E0F80033E026 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,11 +199,11 @@
 		944428A618A1E3280033E026 /* BPContextualHelp */ = {
 			isa = PBXGroup;
 			children = (
-				944428D118A2A4040033E026 /* Images */,
-				944428C118A1E55E0033E026 /* Extensions */,
 				944428A718A1E3280033E026 /* BPContextualHelp.h */,
 				944428A818A1E3280033E026 /* BPHelpAnnotation.h */,
 				944428A918A1E3280033E026 /* BPHelpAnnotation.m */,
+				71A67AA918C43000000F41B7 /* BPHelpAnnotationThemeColors.h */,
+				71A67AAA18C43000000F41B7 /* BPHelpAnnotationThemeColors.m */,
 				944428AA18A1E3280033E026 /* BPHelpAnnotationView.h */,
 				944428AB18A1E3280033E026 /* BPHelpAnnotationView.m */,
 				944428AC18A1E3280033E026 /* BPHelpDisclosureAnnotation.h */,
@@ -213,6 +216,8 @@
 				944428B518A1E3280033E026 /* BPHelpTapAnnotation.m */,
 				944428B618A1E3280033E026 /* BPHelpTapAnnotationView.h */,
 				944428B718A1E3280033E026 /* BPHelpTapAnnotationView.m */,
+				944428C118A1E55E0033E026 /* Extensions */,
+				944428D118A2A4040033E026 /* Images */,
 			);
 			name = BPContextualHelp;
 			path = ../BPContextualHelp;
@@ -346,6 +351,7 @@
 				9444288718A1E0F80033E026 /* BPViewController.m in Sources */,
 				944428C418A1E57D0033E026 /* NSObject+BPContextualHelp.m in Sources */,
 				944428CD18A1E8280033E026 /* UIView+BPContextualHelp.m in Sources */,
+				71A67AAB18C43000000F41B7 /* BPHelpAnnotationThemeColors.m in Sources */,
 				944428BB18A1E3280033E026 /* BPHelpDisclosureAnnotationView.m in Sources */,
 				944428CC18A1E8280033E026 /* BPContextualHelpViewController.m in Sources */,
 				944428C718A1E6D30033E026 /* NSArray+BPContextualHelp.m in Sources */,

@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import "BPHelpAnnotationView.h"
+#import "BPHelpAnnotationThemeColors.h"
 
 #import "UIView+BPContextualHelp.h"
 #import "NSString+BPContextualHelp.h"
@@ -220,8 +221,8 @@ static const CGFloat BPFontSize = 12.0;
 {
 	UIBezierPath *path = [UIBezierPath bezierPath];
 	
-	UIColor *color1 = [UIColor colorWithRed:0.965 green:0.863 blue:0.482 alpha:0.9];
-	UIColor *color2 = [UIColor colorWithRed:0.792 green:0.671 blue:0.286 alpha:0.9];
+	UIColor *color1 = [BPHelpAnnotationThemeColors gradientStartColorForTheme:_annotation.theme];
+	UIColor *color2 = [BPHelpAnnotationThemeColors gradientEndColorForTheme:_annotation.theme];
 	
 	CGFloat tlX = CGRectGetMinX(self.balloonRect);
 	CGFloat tlY = CGRectGetMinY(self.balloonRect);
@@ -345,7 +346,7 @@ static const CGFloat BPFontSize = 12.0;
 		CGContextAddPath(context, path.CGPath);
 		CGContextClip(context);
 		
-		[[UIColor colorWithRed:0.984 green:0.925 blue:0.643 alpha:1] set];
+		[[BPHelpAnnotationThemeColors bevelTopColorForTheme:_annotation.theme] set];
 		[topPath fill];
 	}
 	CGContextRestoreGState(context);
@@ -367,7 +368,7 @@ static const CGFloat BPFontSize = 12.0;
 		CGContextAddPath(context, path.CGPath);
 		CGContextClip(context);
 		
-		[[UIColor colorWithRed:0.675 green:0.573 blue:0.251 alpha:1] set];
+		[[BPHelpAnnotationThemeColors bevelBottomColorForTheme:_annotation.theme] set];
 		[bottomPath fill];
 	}
 	CGContextRestoreGState(context);

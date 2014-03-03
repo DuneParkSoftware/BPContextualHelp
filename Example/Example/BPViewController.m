@@ -52,8 +52,11 @@
 
 - (IBAction)showAnnotations:(id)sender
 {
+    BPHelpAnnotation *annotation1 = [[BPHelpAnnotation alloc] initWithDirection:BPHelpAnnotationDirectionBottom anchorView:self.showButton contentOffset:CGSizeZero andText:@"This annotation is anchored to a view."];
+    annotation1.theme = BPHelpAnnotationThemeSilver;
+
 	NSArray *annotations = @[
-									 [[BPHelpAnnotation alloc] initWithDirection:BPHelpAnnotationDirectionBottom anchorView:self.showButton contentOffset:CGSizeZero andText:@"This annotation is anchored to a view."],
+									 annotation1,
 									 [[BPHelpAnnotation alloc] initWithDirection:BPHelpAnnotationDirectionLeft landscapeAnchorPoint:CGPointMake(50.0, 50.0) portraitAnchorPoint:CGPointMake(50.0, 70.0) contentOffset:CGSizeZero andText:@"This annotation is anchored to one point in landscape and a different one in portrait."],
 									 [[BPHelpAnnotation alloc] initWithDirection:BPHelpAnnotationDirectionTop anchorView:self.showButton contentOffset:CGSizeMake(50.0, 0.0) andText:@"This annotation is offset to the right."],
 									 //[[BPHelpTapAnnotation alloc] initWithDirection:BPHelpAnnotationDirectionNone landscapeAnchorPoint:CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds)) portraitAnchorPoint:CGPointMake(CGRectGetMidY(self.view.bounds), CGRectGetMidX(self.view.bounds)) contentOffset:CGSizeZero andText:nil]

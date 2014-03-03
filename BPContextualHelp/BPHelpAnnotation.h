@@ -31,6 +31,12 @@ typedef enum _BPHelpAnnotationDirection
 	BPHelpAnnotationDirectionRight
 } BPHelpAnnotationDirection;
 
+typedef NS_OPTIONS(NSInteger, BPHelpAnnotationTheme)
+{
+    BPHelpAnnotationThemeGold,
+    BPHelpAnnotationThemeSilver
+};
+
 typedef void (^BPHelpAnnotationTapBlock)();
 
 @class BPHelpAnnotationView;
@@ -38,6 +44,7 @@ typedef void (^BPHelpAnnotationTapBlock)();
 @protocol BPHelpAnnotation <NSObject>
 
 - (BPHelpAnnotationDirection)direction;
+- (BPHelpAnnotationTheme)theme;
 - (CGPoint)landscapeAnchorPoint;
 - (CGPoint)portraitAnchorPoint;
 - (UIView *)anchorView;
@@ -53,6 +60,7 @@ typedef void (^BPHelpAnnotationTapBlock)();
 @interface BPHelpAnnotation : NSObject <BPHelpAnnotation>
 
 @property (nonatomic, readonly) BPHelpAnnotationDirection direction;
+@property (nonatomic, assign) BPHelpAnnotationTheme theme;
 @property (nonatomic, readonly) CGPoint landscapeAnchorPoint;
 @property (nonatomic, readonly) CGPoint portraitAnchorPoint;
 @property (nonatomic, readonly) UIView *anchorView;
