@@ -140,9 +140,12 @@ static const CGFloat BPFontSize = 12.0;
 	}
 	else
 	{
-		contentSize = [self.annotation.text sizeWithFont:[UIFont boldSystemFontOfSize:BPFontSize] constrainedToSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
+        contentSize = [self.annotation.text boundingRectWithSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX)
+                                                         options:0
+                                                      attributes:@{ NSFontAttributeName : [UIFont boldSystemFontOfSize:BPFontSize] }
+                                                         context:nil].size;
 	}
-	
+
 	contentSize = CGSizeMake(ceil(contentSize.width), ceil(contentSize.height));
 	
 	//Figure out the balloon rect -- they're in wrapperView coordinates at this point
