@@ -183,6 +183,11 @@
 						  }];
 }
 
+- (void)hide
+{
+    [self _hide];
+}
+
 - (void)_hide
 {
 	[self _hideWithCompletionBlock:nil];
